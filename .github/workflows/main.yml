@@ -25,7 +25,7 @@ jobs:
         pip install robotframework-seleniumlibrary
         pip install robotframework-datadriver
         pip install webdrivermanager
-        webdrivermanager firefox --linkpath /usr/local/bin
+        webdrivermanager firefox:0.36.0 --linkpath /usr/local/bin
 
     - name: Run Robot Tests
       run: robot tests/smoke/
