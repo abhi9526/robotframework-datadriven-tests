@@ -19,7 +19,11 @@ jobs:
       with:
         python-version: '3.10'
 
+<<<<<<< HEAD
     - name: Install Dependencies
+=======
+    - name: Install dependencies
+>>>>>>> 3215742 (Add missing GitHub Actions workflow file)
       run: |
         pip install robotframework
         pip install robotframework-requests
@@ -29,13 +33,23 @@ jobs:
         webdrivermanager chrome --linkpath /usr/local/bin
 
     - name: Run Robot Tests
+<<<<<<< HEAD
       run: robot Datatest.robot
+=======
+      run: robot tests/smoke/
+>>>>>>> 3215742 (Add missing GitHub Actions workflow file)
 
     - name: Upload Robot Framework Report
       uses: actions/upload-artifact@v4
       with:
         name: robot-report
         path: |
+<<<<<<< HEAD
           output.xml
           log.html
           report.html
+=======
+          tests/smoke/output.xml
+          tests/smoke/log.html
+          tests/smoke/report.html
+>>>>>>> 3215742 (Add missing GitHub Actions workflow file)
