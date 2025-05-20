@@ -1,0 +1,41 @@
+name: Robot Framework Tests
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  robot-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install robotframework
+        pip install robotframework-requests
+        pip install robotframework-seleniumlibrary
+        pip install robotframework-datadriver
+        pip install webdrivermanager
+        webdrivermanager chrome --linkpath /usr/local/bin
+
+    - name: Run Robot Tests
+      run: robot Datatest.robot
+
+    - name: Upload Robot Framework Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: robot-report
+        path: |
+          output.xml
+          log.html
+          report.html
