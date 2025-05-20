@@ -10,7 +10,7 @@ Login Test With Excel
 
 *** Keywords ***
 Open my Browser
-    Open Browser    https://the-internet.herokuapp.com/login    chrome
+    Open Browser    https://the-internet.herokuapp.com/login    firefox
     Maximize Browser Window
 
 Invalid Login
