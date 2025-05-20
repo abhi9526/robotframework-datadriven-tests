@@ -1,0 +1,37 @@
+name: New Robot Test Runner
+
+on:
+  workflow_dispatch:
+
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.10'
+
+    - name: Install Dependencies
+      run: |
+        pip install robotframework
+        pip install robotframework-seleniumlibrary
+        pip install robotframework-datadriver
+        pip install webdrivermanager
+        webdrivermanager chrome --linkpath /usr/local/bin
+
+    - name: Run Tests
+      run: robot tests/smoke/
+
+    - name: Upload Report
+      uses: actions/upload-artifact@v4
+      with:
+        name: robot-report
+        path: |
+          tests/smoke/output.xml
+          tests/smoke/log.html
+          tests/smoke/report.html
