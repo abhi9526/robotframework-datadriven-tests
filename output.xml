@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-19T21:41:03.022705" rpa="false" schemaversion="5">
+<suite id="s1" name="Smoke" source="C:\Users\Abhilsh\Downloads\robotframework_datadriven_final_csv_project\tests\smoke">
+<suite id="s1-s1" name="Datatest" source="C:\Users\Abhilsh\Downloads\robotframework_datadriven_final_csv_project\tests\smoke\Datatest.robot">
+<kw name="Open my Browser" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:03.619818" level="INFO">Opening browser 'chrome' to base url 'https://the-internet.herokuapp.com/login'.</msg>
+<arg>https://the-internet.herokuapp.com/login</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-19T21:41:03.619414" elapsed="3.380064"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-19T21:41:07.000059" elapsed="0.058060"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:41:03.618173" elapsed="3.440197"/>
+</kw>
+<test id="s1-s1-t1" name="Login Test With Excel" line="9">
+<kw name="Invalid Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:07.063225" level="INFO">Typing text 'username' into text field 'xpath=//input[@id="username"]'.</msg>
+<arg>xpath=//input[@id="username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:07.062055" elapsed="0.293823"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:07.356992" level="INFO">Typing text 'password' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:07.356348" elapsed="0.195388"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:07.552438" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:07.552067" elapsed="0.389952"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:07.969766" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-19T21:41:07.942348" elapsed="0.027591"/>
+</kw>
+<arg>username</arg>
+<arg>password</arg>
+<status status="PASS" start="2025-05-19T21:41:07.061099" elapsed="0.909026"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:41:07.058528" elapsed="0.912363"/>
+</test>
+<test id="s1-s1-t2" name="Login Test With Excel" line="9">
+<kw name="Invalid Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:07.975553" level="INFO">Typing text 'username' into text field 'xpath=//input[@id="username"]'.</msg>
+<arg>xpath=//input[@id="username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:07.975171" elapsed="0.185672"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:08.161638" level="INFO">Typing text 'password' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:08.161174" elapsed="0.250212"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:08.412590" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:08.411921" elapsed="0.367538"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:08.813631" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-19T21:41:08.780152" elapsed="0.033997"/>
+</kw>
+<arg>username</arg>
+<arg>password</arg>
+<status status="PASS" start="2025-05-19T21:41:07.974589" elapsed="0.840001"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:41:07.972279" elapsed="0.843563"/>
+</test>
+<test id="s1-s1-t3" name="Login Test With Excel" line="9">
+<kw name="Invalid Login">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:08.821786" level="INFO">Typing text 'username' into text field 'xpath=//input[@id="username"]'.</msg>
+<arg>xpath=//input[@id="username"]</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:08.821080" elapsed="0.194055"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:09.016421" level="INFO">Typing text 'password' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:09.015675" elapsed="0.202995"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:09.219718" level="INFO">Clicking button 'xpath=//button[@type="submit"]'.</msg>
+<arg>xpath=//button[@type="submit"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-19T21:41:09.219129" elapsed="0.318329"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-19T21:41:09.566181" level="INFO">Current page contains text 'Your username is invalid!'.</msg>
+<arg>Your username is invalid!</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2025-05-19T21:41:09.538239" elapsed="0.028283"/>
+</kw>
+<arg>username</arg>
+<arg>password</arg>
+<status status="PASS" start="2025-05-19T21:41:08.820280" elapsed="0.746588"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:41:08.817169" elapsed="0.750642"/>
+</test>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-05-19T21:41:09.570261" elapsed="2.262077"/>
+</kw>
+<status status="PASS" start="2025-05-19T21:41:03.081446" elapsed="8.751241"/>
+</suite>
+<status status="PASS" start="2025-05-19T21:41:03.025835" elapsed="8.811276"/>
+</suite>
+<statistics>
+<total>
+<stat pass="3" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Smoke" id="s1" pass="3" fail="0" skip="0">Smoke</stat>
+<stat name="Datatest" id="s1-s1" pass="3" fail="0" skip="0">Smoke.Datatest</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-19T21:41:07.972397" level="WARN">Multiple tests with name 'Login Test With Excel' executed in suite 'Smoke.Datatest'.</msg>
+<msg time="2025-05-19T21:41:08.817295" level="WARN">Multiple tests with name 'Login Test With Excel' executed in suite 'Smoke.Datatest'.</msg>
+</errors>
+</robot>
